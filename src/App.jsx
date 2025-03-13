@@ -9,6 +9,7 @@ import {
 } from "./pages";
 import { loader as landingLoader } from "./pages/Landing";
 import { loader as cocktailLoader } from "./pages/Cocktail";
+import { action as newsLetterAction } from "./pages/NewsLetter";
 import SinglePageError from "./pages/SinglePageError";
 
 const router = createBrowserRouter([
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "newsletter",
+        action: newsLetterAction,
         element: <NewsLetter />,
       },
       {
