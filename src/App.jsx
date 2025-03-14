@@ -30,14 +30,14 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: landingLoader,
+        loader: landingLoader(queryClient),
         errorElement: <SinglePageError />,
         element: <Landing />,
       },
       {
         path: "cocktail/:id",
         errorElement: <SinglePageError />,
-        loader: cocktailLoader,
+        loader: cocktailLoader(queryClient),
         element: <Cocktail />,
       },
       {
